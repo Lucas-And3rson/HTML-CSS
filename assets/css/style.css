@@ -39,14 +39,25 @@ body::before {
     background-color: rgb(10, 10, 49);
   }
 
+  i#fechar{
+    background-color: white;
+    color: black;
+    padding: 6px;
+    cursor: pointer;
+  }
+
+  i#fechar:hover{
+    background-color: #b3b3b3;
+  }
+
   nav > h1{
     font-size: 15px;
   }
 
   .logo img {
     margin-left: 88%;
-    height: 140px;
-    width: 140px;
+    height: 130px;
+    width: 130px;
 }
 
 .header {
