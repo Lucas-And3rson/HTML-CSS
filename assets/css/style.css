@@ -1,201 +1,150 @@
-body {
-    padding: 0;
-    margin: 0;
-    height: 100vh;
-    width: 100%;
-    position: relative;
-    background-image: url(../img/backgroundLogin.jpg);
-    background-image: cover;
-    background-repeat: no-repeat;
-    font-family: Arial, Helvetica, sans-serif;
+@charset "UTF-8";
+
+/*
+    Paleta de cores
+    Verde: #49a09d
+    Lilás: #5f2c82
+*/
+
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
 }
-body::before {
-    background-color: rgb(0, 0, 0, .5);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+
+body, html {
+    background-color: #13349e;
+    height: 100vh;
+    width: 100vw;
 }
 
 .material-symbols-outlined {
-    font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 48
-  }
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
 
-  i#burguer{
-    background-color: rgb(5, 1, 32);
-    color: #fff;
-    padding: 10px;
-    cursor: pointer;
-  }
+main {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
 
-  i#burguer:hover{
-    background-color: rgb(10, 10, 49);
-  }
+section#login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
 
-  i#fechar{
     background-color: white;
-    color: black;
-    padding: 6px;
-    cursor: pointer;
-  }
+    width: 250px;
+    height: 515px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450);
 
-  i#fechar:hover{
-    background-color: #b3b3b3;
-  }
-
-  nav > h1{
-    font-size: 15px;
-  }
-
-  .logo img {
-    margin-left: 88%;
-    height: 130px;
-    width: 130px;
+    transform: translate(-50%, -50%);
+    transition: width .3s, height .3s;
+    transition-timing-function: ease;
 }
 
-.header {
-    padding: 20px 50px;
-    position: relative;
-    z-index: 10;
+section#login > div#imagem {
+    display: block;
+    background: #5f2c82 url(../img/backgroundLogin.jpg) no-repeat;
+    background-size: cover;
+    background-position: left bottom;
+    height: 200px;
 }
 
-.login_body {
-    padding: 60px;
-    z-index: 90;
-    position: relative;
-    max-width: 450px;
-    height: 450px;
-    margin-left: 50%;
-    background-color: rgba(39, 99, 114, 0.75);
-    border-radius: 10px;
-    box-sizing: border-box;
-    transform: translateX(-50%);
+section#login > div#formulario {
+    display: block;
+    padding: 10px;
 }
 
-.login_body h2 {
-    font-size: 32px;
-    color: #fff;
-    margin-top: 0;
-}
-
-.login_body input {
-    height: 50px;
-    width: 100%;
-    color: #fff;
-    background-color: #333;
-    border: none;
-    border-radius: 5px;
-    padding-left: 15px;
-    box-sizing: border-box;
-    outline: none;
-}
-
-.login_body input:hover {
-    background-color: #444;
-}
-
-.input_box {
-    margin-bottom: 25px;
-}
-
-.login_body button {
-    height: 50px;
-    width: 100%;
-    color: #fff;
-    background-color: #0d09e5;
-    border-radius: 3px;
-    font-weight: bold;
-    font-size: 16px;
-    border: none;
+div#formulario > h1 {
+    text-align: center;
     margin-bottom: 10px;
 }
 
-.login_body button:hover {
-    background-color: #1b17fc;
+div#formulario > p {
+    font-size: 0.8em;
+}
+
+form > div.campo {
+    background-color: #0e24e6;
+    border: 2px solid #0e24e6;
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    margin: 5px 0px;
+}
+
+div.campo > label {
+    display: none;
+}
+
+div.campo > i {
+    color: white;
+    /*background-color: black;*/
+    font-size: 1.9em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo > input {
+    background-color: #94cfcd;
+    font-size: 1em;
+    width: calc(100% - 45px);
+    height: 100%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+    transform: translateY(-10px);
+}
+
+div.campo > input:focus-within {
+    background-color: white;
+    border: none;
+}
+
+form > input[type=submit] {
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: #53aaa7;
+    color: white;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-.support {
-    display: flex;
-    color: #b3b3b3;
-    justify-content: space-between;
-    font-size: 12px;
-    margin-bottom: 5px;
+form > input[type=submit]:hover {
+    background-color: #2d6462;
 }
 
-.support input {
-    width: 15px;
-    height: 15px;
-}
-
-.remember {
-    display: flex;
-    align-items: center;
-}
-
-.remember span {
-    margin-right: 5px;
-    height: 25px;
-}
-
-.help a {
-    text-decoration: none;
-    color: #ffffff;
-}
-
-.help a:hover {
-    text-decoration: underline;
-}
-
-.login_facebook {
-    display: flex;
-    align-items: center;
+form > a.botao {
+    display: block;
+    text-align: center;
+    font-size: 1em;
     width: 100%;
-    color: #ffffff;
-}
-
-.login_facebook span {
-    margin-right: 5px;
-    font-size: 13px;
-}
-
-.login_facebook span a {
-    text-decoration: none;
-    color: #ffffff;
-}
-
-.sign_up {
-    color: #ffffff;
-    font-size: 16px;
-}
-
-.sign_up a {
-    color: #fff;
-    font-size: 16px;
+    height: 40px;
+    padding-top: 5px;
+    margin-top: 5px;
+    background-color: white;
+    color: #2d6462;
+    border: 1px solid #49a09d;
+    border-radius: 7px;
     text-decoration: none;
 }
 
-.sign_up a:hover {
-    text-decoration: underline;
+form > a.botao:hover {
+    background-color: #6cd3cf;
 }
 
-.terms {
-    color: #737373;
-    font-size: 13px;
-}
-
-.terms a {
-    text-decoration: none;
-    color: #0071eb;
-}
-
-.terms a:hover {
-    text-decoration: underline;
+form > a.botao > i {
+    font-size: 0.8em;
 }
