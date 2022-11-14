@@ -110,19 +110,24 @@ div.campo > input:focus-within {
     border: none;
 }
 
-form > input[type=submit] {
+/*botão de logar*/
+form > a.entrar {
     display: block;
+    text-align: center;
     font-size: 1em;
     width: 100%;
     height: 40px;
+    padding-top: 5px;
+    margin-top: 5px;
     background-color: #53aaa7;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    text-decoration: none;
 }
 
-form > input[type=submit]:hover {
+form > a.entrar:hover {
     background-color: #2d6462;
 }
 
